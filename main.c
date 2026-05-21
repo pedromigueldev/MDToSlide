@@ -1,4 +1,5 @@
 #include <stdio.h>			
+#include <stdbool.h>
 #include "vendor/mlib/mfile.h"
 #include "vendor/mlib/mvector.h"
 #include "vendor/mlib/mprint.h"
@@ -21,6 +22,7 @@ int main(int argc, char** argv) {
 
 	MstrView line = {0}, rest = mk;
 	while(!MEOF(line = MstrSplitView(rest, '\n', &rest))) {
+		MPrintFmt(MstrViewFmt(line));
     	int level = 0;
     	MstrView garb = line;
     	MstrView parsing = EMPTYVIEW(MstrView);
@@ -76,7 +78,7 @@ int main(int argc, char** argv) {
    		        break;
    		    default:
    		    	if(line.length > 0)
-   		    		MStrFmt(&html, "<p>"MstrViewFmt(line)"</p>");
+   		    		MStrFmt(&html, "<p>"MstrViewFmt(garb)"</p>");
 		}
 	};
 
