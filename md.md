@@ -1,26 +1,35 @@
-# Page 1: Introduction
+# Markdown Parser Demo
 
-This is the first page.  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+This is a simple paragraph with **bold text** and *italic text*.
 
-![Example image](https://picsum.photos/200/100)
+## Inline Elements
 
----
+You can also use `inline code`.
 
-# Page 2: Key Points
+A link looks like this:
 
-- Point A  
-- Point B  
-- Point C  
+[OpenAI](https://openai.com)
 
-> A blockquote that spans this second page.
-****
----
+## Lists
 
-# Page 3: Conclusion
+- First item
+- Second item
+- Third item
 
-| Column 1 | Column 2 |
-|----------|----------|
-| Data 1   | Data 2   |
+## Blockquote
 
-**End of document.**
+> This is a quote.
+> It can span multiple lines.
+
+## Code Block
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("hello\n");
+    return 0;
+}
+```
+
+Final paragraph.
