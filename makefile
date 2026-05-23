@@ -11,7 +11,8 @@ CFLAGS = $(DEBUG_FLAGS)
 .PHONY: all clean								
 
 all: MDToSite
-MDToSite: main.c 						
+
+MDToSite: main.c
 	rm -f MDToSite && $(CC) $(CFLAGS) main.c -o MDToSite
 clean:											
 	rm -f MDToSite
